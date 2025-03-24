@@ -17,12 +17,11 @@
                 <td><?php echo $row['TenHP']; ?></td>
                 <td><?php echo $row['SoTinChi']; ?></td>
                 <td>
-                    <?php echo isset($row['SoLuongDuKien']) ? $row['SoLuongDuKien'] : 0; ?>
+                    60
                     
-                    <!-- Form cập nhật số lượng dự kiến -->
-                    <form action="index.php?controller=course&action=updateExpectedNumber" method="post" style="display: inline;">
+                    <form action="index.php?controller=course&action=updateExpectedNumber" method="post" style="display: none;">
                         <input type="hidden" name="MaHP" value="<?php echo $row['MaHP']; ?>">
-                        <input type="number" name="SoLuongDuKien" value="<?php echo isset($row['SoLuongDuKien']) ? $row['SoLuongDuKien'] : 0; ?>" style="width: 60px;">
+                        <input type="hidden" name="SoLuongDuKien" value="60">
                         <button type="submit" class="btn">Cập nhật</button>
                     </form>
                 </td>
